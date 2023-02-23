@@ -55,7 +55,7 @@ const layout1: Partial<Layout> = {
     // autorange: true,
   },
   yaxis: {
-    title: 'performance (ms) in log scale',
+    title: '<getBlock> performance (ms)',
     type: 'log',
     titlefont: {
       size: 28,
@@ -84,11 +84,10 @@ const layout1: Partial<Layout> = {
 const layout2: Partial<Layout> = {
   ...layout1,
   title: '<getReceipt> RPC Performance V.S. Block Complexity',
-  // yaxis: {
-  //   ...layout1.yaxis,
-  //   title: 'performance (ms) in liner scale',
-  //   type: 'linear',
-  // }
+  yaxis: {
+    ...layout1.yaxis,
+    title: '<getReceipt> performance (ms)',
+  }
 }
 
 const App = () => {
